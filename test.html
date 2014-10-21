@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<title>広島 vs 川崎Ｆ（Ｊ１ 第2節）試合速報 - Ｊリーグ</title>
+		<meta name="Keywords" content="Ｊリーグ公式サイト,広島 vs 川崎Ｆ（Ｊ１ 第2節）試合速報,Ｊリーグ,サッカー,Ｊ１クラブ,Ｊ２クラブ,Ｊ１,Ｊ２,ヤマザキナビスコカップ,フジゼロックススーパーカップ,Ｊ１昇格プレーオフ,Ｊリーグアウォーズ,J awards,acl,Ｊユースカップ,Ｊリーグ日程,Ｊリーグ結果,Ｊリーグ速報,Ｊリーグ順位" />
+		<meta name="Description" content="Ｊリーグ公式サイト：2014年3月8日（土） Ｊ１ 第2節 - 広島 vs 川崎Ｆ 試合速報。" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://www.j-league.or.jp/live/2014/j1/030801.html" />
+		<meta property="og:site_name" content="Ｊリーグ公式サイト" />
+		<meta property="og:image" content="http://www.j-league.or.jp/img/ogp/live_200x200.png" />
+		<meta property="og:title" content="広島 vs 川崎Ｆ（Ｊ１ 第2節）試合速報" />
+		<meta property="og:description" content="2014年3月8日（土） Ｊ１ 第2節 - 広島 vs 川崎Ｆ 試合速報。" />
+		<link rel="stylesheet" type="text/css" href="/css/live2011f.css" media="all" />
+		<link rel="apple-touch-icon" href="/images/j-icon.png" />
+		<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="jl-translate.js"></script>
+		<script type="text/javascript" language="JavaScript">
+
+		$(document).ready(function(){
+			if ( $.cookie("gclugboxDiv") == "none" ) {
+				$("#gclugboxDiv").css("display","none");
+			}
+
+			$("#gisttle-all").click(function(){
+				$("#gclugboxDiv").slideToggle("fast",function(){
+					$.cookie("gclugboxDiv",$("#gclugboxDiv").css("display"));
+				});
+			});
+		});
+		
+		// Newウィンドウ用
+		function openWindow(URL,winName,features)
+		{
+			window.open(URL,winName,features);
+		}
+
+		// dataのNewウィンドウ
+		function openDataWindow( URL )
+		{
+			openWindow(URL,'nw','width=870,height=500,resizable=1,toolbar=0,scrollbars=1,location=0,menubar=0');
+		}
+
+		// 試合がある日のウィンドウサイズ
+		var widthOnGame  = 950;
+		var heightOnGame = 950;
+		
+		
+		// 試合が無い日のウィンドウサイズ
+		var widthOffGame  = 500;
+		var heightOffGame = 450;
+		
+		function liveResize( ongame )
+		{
+			if ( ongame ) {
+				window.resizeTo( widthOnGame, heightOnGame );
+			} else {
+				window.resizeTo( widthOffGame, heightOffGame );
+			}
+		}
+		
+		
+		// 選手リスト切替
+		function tabChange( open, close, image_id, image_src )
+		{
+			document.getElementById(open).style.display = "block";
+			document.getElementById(open).style.visibility = "visible";
+			document.getElementById(close).style.display = "none";
+			document.getElementById(close).style.visibility = "hidden";
+			document.getElementById(image_id).style.background = "url("+image_src+")";
+		}
+		
+		var reloadtime = ( 60 + 5 ) * 1000;
+		function pageRefresh()
+		{
+			window.location.reload();
+		}
+		setTimeout( pageRefresh, reloadtime );
+
+		colors = new Array(
+			"F","E","D","C","B","A",9,8,7,6,5,4,3,2,1,0
+		);
+		colornum = 0;
+		sides = new Array();
+
+		function goalColors()
+		{
+			if ( sides.length < 1 ) { return; }
+
+			colornum++;
+			if ( colornum >= colors.length ) {
+				colornum = 0;
+			}
+
+			var str = "#";
+			for ( i=0; i<6; i++ ) {
+				str += colors[colornum];
+			}
+
+			for ( j=0; j<sides.length; j++ ) {
+				document.getElementById("scoreNumber"+sides[j]).style.color = str;
+			}
+			setTimeout( "goalColors()", 1000/colors.length );
+		}
+		</script>
+		<script src="/Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36056004-1']);
+		  _gaq.push(['_setDomainName', 'j-league.or.jp']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</head>
+	<body onLoad="liveResize(1);">
+        <!-- お知らせ -->
+		<div id="live-info"><script type="text/javascript" src="/js/live-info.js"></script></div>
+		<div id="gameindex3">
+			<!-- 他会場 -->
+			<div class="gclugbox"id="gclugboxDiv">
+				<ul>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030801.html?r=20140320150710" class="hi">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">広島<strong>2</strong></span>
+								<span class="clubr">川崎Ｆ<strong>1</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030802.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">新潟<strong>0</strong></span>
+								<span class="clubr">Ｇ大阪<strong>2</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030803.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">徳島<strong>0</strong></span>
+								<span class="clubr">Ｃ大阪<strong>2</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030804.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">大宮<strong>1</strong></span>
+								<span class="clubr">名古屋<strong>2</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030805.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">Ｆ東京<strong>1</strong></span>
+								<span class="clubr">甲府<strong>1</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030806.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">清水<strong>0</strong></span>
+								<span class="clubr">横浜FM<strong>1</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030807.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">神戸<strong>1</strong></span>
+								<span class="clubr">柏<strong>1</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030808.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">浦和<strong>0</strong></span>
+								<span class="clubr">鳥栖<strong>1</strong></span>
+							</a>
+						</li>
+						<li class="gameclub-end">
+							<a href="/live/2014/j1/030809.html?r=20140320150710">
+								<span class="clubc">試合終了</span>
+								<span class="clubl">鹿島<strong>2</strong></span>
+								<span class="clubr">仙台<strong>0</strong></span>
+							</a>
+						</li>
+				</ul>
+			</div>
+			<div id="gisttle-all"><a style="cursor:pointer;">他会場試合速報</a></div>
+		</div>
+
+
+		<div id="mainscore">
+			<div id="mainscorebox">
+				<div id="sbox-gamebg">
+					<!-- 時間 -->
+					<div id="clubc">試合終了</div>
+				</div>
+				<div id="sbox-gamemain">
+					<!-- エンブレム・得点 -->
+					<div id="score-l">
+						<span id="scoreNumberL">2</span>
+						<div id="score-hiroshima">
+						</div>
+						<div class="clubname">サンフレッチェ広島</div>
+					</div>
+					<div id="score-r">
+						<span id="scoreNumberR">1</span>
+						<div id="score-kawasakif">
+						</div>
+						<div class="clubname">川崎フロンターレ</div>
+					</div>
+					<!-- 前半後半 -->
+					<div id="score-c">
+						<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td>0</td>
+									<th>前半</th>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<th>後半</th>
+									<td>0</td>
+								</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="outsideframe">
+			<div id="livemain">
+            	<!-- ホーム選手 -->
+				<div id="sbox-gamel">
+					<div class="playerlist">
+						<table cellspacing="0" cellpadding="0" class="playerlist-box">
+							<tr>
+								<th class="sm" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="posi">GK</td>
+								<td class="num">1</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%CE%D3%A1%A1%C2%EE%BF%CD&number=1">林　卓人</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">33</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%B1%F6%C3%AB%A1%A1%BB%CA&number=33">塩谷　司</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">5</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%C0%E9%CD%D5%A1%A1%CF%C2%C9%A7&number=5">千葉　和彦</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">4</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%BF%E5%CB%DC%A1%A1%CD%B5%B5%AE&number=4">水本　裕貴</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">14</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%A5%DF%A5%AD%A5%C3%A5%C1&number=14">ミキッチ</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">6</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%C0%C4%BB%B3%A1%A1%C9%D2%B9%B0&number=6">青山　敏弘</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">8</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%BF%B9%BA%EA%A1%A1%CF%C2%B9%AC&number=8">森崎　和幸</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">16</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%BB%B3%B4%DF%A1%A1%C3%D2&number=16">山岸　智</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">9</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%C0%D0%B8%B6%A1%A1%C4%BE%BC%F9&number=9">石原　直樹</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">24</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%CC%EE%C4%C5%C5%C4%A1%A1%B3%D9%BF%CD&number=24">野津田　岳人</a></td>
+							</tr>
+							<tr>
+								<td class="posi">FW</td>
+								<td class="num">11</td>
+								<td class="name"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%BA%B4%C6%A3%A1%A1%BC%F7%BF%CD&number=11">佐藤　寿人</a></td>
+							</tr>
+							<tr>
+								<th class="ss" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="posi-reserve">GK</td>
+								<td class="num-reserve">13</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%C1%FD%C5%C4%A1%A1%C2%EE%CC%E9&number=13">増田　卓也</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">28</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%B4%DD%C3%AB%A1%A1%C2%F3%CC%E9&number=28">丸谷　拓也</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">30</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%BC%C6%BA%EA%A1%A1%B9%B8%C0%BF&number=30">柴崎　晃誠</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">17</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%A5%D1%A5%AF%A1%A1%A5%D2%A5%E7%A5%F3%A5%B8%A5%F3&number=17">パク　ヒョンジン</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">18</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%C7%F0%A1%A1%B9%A5%CA%B8&number=18">柏　好文</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">10</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%B9%E2%C7%EB%A1%A1%CD%CE%BC%A1%CF%BA&number=10">高萩　洋次郎</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">FW</td>
+								<td class="num-reserve">29</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%C0%F5%CC%EE%A1%A1%C2%F3%CB%E1&number=29">浅野　拓磨</a></td>
+							</tr>
+							<tr>
+								<th class="mn" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="name" colspan="3">森保　一</td>
+							</tr>
+							<tr>
+								<th class="cd" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="cd" colspan="3">
+								<div class="listdoc">
+									<ul>
+<!--
+-->
+										<li class="icon-doc"><a href="/data/redirect.php?c=hiroshima&t=matchup&g=j1_0" target="_blank">対戦データ</a></li>
+										<li class="icon-doc"><a href="/data/redirect.php?c=hiroshima&t=player&g=j1" target="_blank">登録選手一覧</a></li>
+										<li class="icon-doc"><a href="/data/redirect.php?league=j1&genre=Precord&c=hiroshima&g=j1_1" target="_blank">選手出場記録</a></li>
+										<li class="icon-doc"><a href="/data/redirect.php?league=j1&genre=suspension&c=hiroshima&g=j1_1" target="_blank">警告・退場・出場停止一覧</a></li>
+									</ul>
+								</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- アウェイ選手 -->
+				<div id="sbox-gamer">
+					<div class="playerlist">
+						<table cellspacing="0" cellpadding="0" class="playerlist-box">
+							<tr>
+								<th class="sm" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="posi">GK</td>
+								<td class="num">21</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C0%BE%C9%F4%A1%A1%CD%CE%CA%BF&number=21">西部　洋平</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">3</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C5%C4%C3%E6%A1%A1%CD%B5%B2%F0&number=3">田中　裕介</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">5</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%A5%B8%A5%A7%A5%B7&number=5">ジェシ</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">4</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%B0%E6%C0%EE%A1%A1%CD%B4%CA%E5&number=4">井川　祐輔</a></td>
+							</tr>
+							<tr>
+								<td class="posi">DF</td>
+								<td class="num">23</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C5%D0%CE%A4%A1%A1%B5%FD%CA%BF&number=23">登里　享平</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">20</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%B0%F0%CB%DC%A1%A1%BD%E1%B0%EC&number=20">稲本　潤一</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">6</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%BB%B3%CB%DC%A1%A1%BF%BF%B4%F5&number=6">山本　真希</a></td>
+							</tr>
+							<tr>
+								<td class="posi">MF</td>
+								<td class="num">14</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C3%E6%C2%BC%A1%A1%B7%FB%B9%E4&number=14">中村　憲剛</a></td>
+							</tr>
+							<tr>
+								<td class="posi">FW</td>
+								<td class="num">11</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%BE%AE%CE%D3%A1%A1%CD%AA&number=11">小林　悠</a></td>
+							</tr>
+							<tr>
+								<td class="posi">FW</td>
+								<td class="num">10</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%A5%EC%A5%CA%A5%C8&number=10">レナト</a></td>
+							</tr>
+							<tr>
+								<td class="posi">FW</td>
+								<td class="num">13</td>
+								<td class="name"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C2%E7%B5%D7%CA%DD%A1%A1%B2%C5%BF%CD&number=13">大久保　嘉人</a></td>
+							</tr>
+							<tr>
+								<th class="ss" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="posi-reserve">GK</td>
+								<td class="num-reserve">1</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%BF%F9%BB%B3%A1%A1%CE%CF%CD%B5&number=1">杉山　力裕</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">DF</td>
+								<td class="num-reserve">7</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C3%E6%DF%B7%A1%A1%C1%EF%C2%C0&number=7">中澤　聡太</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">DF</td>
+								<td class="num-reserve">17</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C9%F0%B2%AC%A1%A1%CD%A5%C5%CD&number=17">武岡　優斗</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">34</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%A5%D1%A5%A6%A5%EA%A1%BC%A5%CB%A5%E7&number=34">パウリーニョ</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">16</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%C2%E7%C5%E7%A1%A1%CE%BD%C2%C0&number=16">大島　僚太</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">MF</td>
+								<td class="num-reserve">19</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%BF%B9%C3%AB%A1%A1%B8%AD%C2%C0%CF%BA&number=19">森谷　賢太郎</a></td>
+							</tr>
+							<tr>
+								<td class="posi-reserve">FW</td>
+								<td class="num-reserve">9</td>
+								<td class="name-reserve"><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%BF%B9%C5%E7%A1%A1%B9%AF%BF%CE&number=9">森島　康仁</a></td>
+							</tr>
+							<tr>
+								<th class="mn" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="name" colspan="3">風間　八宏</td>
+							</tr>
+							<tr>
+								<th class="cd" colspan="3">&nbsp;</th>
+							</tr>
+							<tr>
+								<td class="cd" colspan="3">
+								<div class="listdoc">
+									<ul>
+<!--
+-->
+										<li class="icon-doc"><a href="/data/redirect.php?c=kawasakif&t=matchup&g=j1_0" target="_blank">対戦データ</a></li>
+										<li class="icon-doc"><a href="/data/redirect.php?c=kawasakif&t=player&g=j1" target="_blank">登録選手一覧</a></li>
+										<li class="icon-doc"><a href="/data/redirect.php?league=j1&genre=Precord&c=kawasakif&g=j1_1" target="_blank">選手出場記録</a></li>
+										<li class="icon-doc"><a href="/data/redirect.php?league=j1&genre=suspension&c=kawasakif&g=j1_1" target="_blank">警告・退場・出場停止一覧</a></li>
+									</ul>
+								</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- スコアボード -->
+				<div id="sbox-game">
+					<div class="roundcont">
+						<div class="roundtop"><span class="tl-img"></span></div>
+						<div id="sbox-height">
+						<!-- 得点者 -->
+						<div id="goalplayer">
+							<div class="ttle">GOAL</div>
+							<div id="gp-l">
+								<table cellspacing="0" cellpadding="0">
+									<tr>
+										<td><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%BA%B4%C6%A3%A1%A1%BC%F7%BF%CD&number=11">佐藤　寿人</a></td>
+										<td class="goaltime">57分</td>
+									</tr>
+									<tr>
+										<td><a href="/club/player/redirect/?club=%B9%AD%C5%E7&name=%B1%F6%C3%AB%A1%A1%BB%CA&number=33">塩谷　司</a></td>
+										<td class="goaltime">90分+5</td>
+									</tr>
+								</table>
+							</div>
+							<div id="gp-r">
+								<table cellspacing="0" cellpadding="0">
+									<tr>
+										<td class="goaltime">45分+2</td>
+										<td><a href="/club/player/redirect/?club=%C0%EE%BA%EA%A3%C6&name=%BE%AE%CE%D3%A1%A1%CD%AA&number=11">小林　悠</a></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+                        
+						<!-- 試合経過 -->
+						<!-- 公式記録 -->
+						<div id="live-btn01"><a href="/result/2014/j1/030801.html" target="_blank">試合記録</a></div>
+						<!-- 試合情報 -->
+                        <div id="sbox-ttle">
+							<div class="ttle">試合情報</div>
+							<ul>
+								<li class="d-1">2014Ｊリーグ　ディビジョン１　第２節第１日</li>
+								<li class="d-2">サンフレッチェ広島vs川崎フロンターレ</li>
+								<li class="d-3">2014年3月8日　12:34キックオフ</li>
+								<li class="d-4">【スタジアム】エディオンスタジアム広島</li>
+								<li class="d-5">
+								【天候】晴 8.1℃ 42%
+								</li>
+								<li class="d-6">【入場者数】16,176人</li>
+								<li class="d-7">【主審】村上　伸次</li>
+								<li class="d-8">【副審】八木　あかね／山際　将史</li>
+							</ul>
+						</div>
+						</div>
+						<div class="roundbottom"><span class="bl-img"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="jlogo"><a href="/" target="_blank">Ｊリーグ公式サイト</a></div>
+<script type="text/javascript">
+goalColors();
+</script>
+
+	</body>
+</html>
